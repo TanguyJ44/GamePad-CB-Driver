@@ -6,7 +6,7 @@ public class Main {
 		
 		System.out.println("GamePad CB Driver starting ...");
 		
-		//Server.init();
+		Server.init(Integer.parseInt(args[0]));
 		
 		GamePad.init();
 		

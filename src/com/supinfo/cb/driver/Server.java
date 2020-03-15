@@ -14,10 +14,12 @@ public class Server {
     
     static PrintWriter printWriter;
 	
-	public static void init () {
+	public static void init (int port) {
 		try {
 			
-			serverSocket = new ServerSocket(22);
+			serverSocket = new ServerSocket(port);
+			
+			System.out.println("Waiting for a client connection ... [" + port + "]");
 			
 			socket = serverSocket.accept();
 			
