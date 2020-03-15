@@ -26,3 +26,10 @@ Voici les différents messages envoyés par le driver :
 - B  :  key B pressed
 
 # Dev'Log
+- Création du projet
+- Import de la librairie J360Controller
+- Création du serveur socket
+- Ajout de la méthode de communication
+- Création du controlleur
+- Implémentation des évenements de la manette
+- Test et finalisation
