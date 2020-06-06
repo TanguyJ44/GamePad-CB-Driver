@@ -42,7 +42,17 @@ public class Server {
 	 */
 	
 	public static void send (String req) {
-		printWriter.println(req);
+		if(!socket.isClosed()) {
+			printWriter.println(req);
+		} else {
+			printWriter.close();
+			try {
+				serverSocket.close();
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
+			System.exit(0);
+		}
 	}
 	
 	public static void disconnect () {
