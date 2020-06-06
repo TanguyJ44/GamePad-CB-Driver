@@ -45,28 +45,21 @@ public class Server {
 		if(!socket.isClosed()) {
 			printWriter.println(req);
 		} else {
-			printWriter.close();
-			try {
-				serverSocket.close();
-			} catch (IOException e) {
-				e.printStackTrace();
-			}
-			System.exit(0);
+			disconnect();
 		}
 	}
 	
 	public static void disconnect () {
 		try {
 			printWriter.close();
-			socket.close();
 			serverSocket.close();
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
-		
-		System.exit(0);
-		
+
 		System.out.println("GamePad CB Driver stopping ...");
+
+		System.exit(0);
 	}
 
 }
